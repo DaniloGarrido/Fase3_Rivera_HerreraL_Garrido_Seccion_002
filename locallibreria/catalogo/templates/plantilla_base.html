@@ -10,11 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-<<<<<<< HEAD
   <script src="{ %static 'js/metodos_ventana_compra.js' %}"></script>
-=======
-  <script src="{{STATIC_URL}}js/metodos_ventana_compra.js"></script>
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
   <!-- Add additional CSS in static file -->
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/estilosadmin.css' %}">
@@ -33,7 +29,6 @@
           <a class="navbar-brand fontnav"><img src="{% static 'img/gatico.png' %}" alt="Logo" style="width: 30px;"></a>
           <a  class="navbar-brand fontnav " href="#">My HW Factory</a>
           {% if user.is_authenticated  %}
-<<<<<<< HEAD
           {% if perms.catalogo.view_producto%}
           <label style="font-weight: 1;font-size:xx-small;">Cliente</label>
           
@@ -42,10 +37,6 @@
           
           {% endif %}
           {% endif%}
-=======
-          <label style="font-weight: 1;font-size:xx-small;">Admin</label>
-          {% endif %}
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
           <div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"><i class="fas fa-bars fa-lg fontnav" style="margin-top: 5px;" ></i></span>
@@ -54,7 +45,6 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               {% if user.is_authenticated  %}
-<<<<<<< HEAD
                 {%if perms.catalogo.add_producto%}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" style="color: white" data-toggle="dropdown" href="#">Ingresos</a>
@@ -99,52 +89,15 @@
 
               {% if user.is_authenticated  %}
               <li class="nav-item">
-=======
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: white" data-toggle="dropdown" href="#">Ingresos</a>
-                <div class="dropdown-menu" style="background:rgb(0, 110, 255);">
-                  <a class="nav-link fontnav" href="{% url 'producto' %}" target=blank_>Produtos</a>
-                  <a class="nav-link fontnav" href="{% url 'marca' %}" >Marcas</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fontnav" href="{% url 'index' %}">Inicio</a>
-              </li>
-        
-              {% else %}
-              
-              {% endif %}
-              
-              {% if user.is_authenticated  %}
-
-              {% else %}
-              <li class="nav-item">
-                <a class="nav-link fontnav" href="{% url 'index' %}" >Inicio</a>
-              </li>   
-              <li class="nav-item">
-                <a class="nav-link fontnav" href="{% url 'producto' %}" >Productos</a>
-              </li>   
-              <li class="nav-item">
-                <a class="nav-link fontnav" href="{% url 'login' %}" >LogIn</a>
-              </li>   
-              {% endif %}
-
-              {% if user.is_authenticated  %}
-              <li class="nav-item">
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
                 <a class="nav-link fontnav" href="{% url 'logout' %}" >LogOut</a>
               </li>   
-              {% else %}
+             
               
-<<<<<<< HEAD
               
               
               <li class="nav-item">
                 <a class="nav-link fontnav" href="{% url 'logout' %}" >Perfil: {{user.username}}</a>
               </li>   
-=======
-              {% endif %}
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
             </ul>
             <label type="button" class="btnligthmode nav-item" id="btndarkmode"  >
               <i class="fas fa-adjust btniconcolor"></i>                      

@@ -11,10 +11,7 @@
             
         <div style="background: white; padding: 10px;">
         {% if user.is_authenticated  %}
-<<<<<<< HEAD
         {% if perms.catalogo.add_producto%} 
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
         {% if producto %}
         <h2>Detalles: {{producto.nombre}}</h2>
             <table class="table table-bordered">
@@ -60,7 +57,6 @@
                 <a class="btn btn-secondary" href="{% url 'producto_update' pk=producto.pk %}">Editar<span class="glyphicon glyphicon-pencil"></span></a>
                 <a class="btn btn-danger" href="{% url 'producto_delete' pk=producto.pk %}">Eliminar<span class="glyphicon glyphicon-trash"></span></a>
             </div>
-<<<<<<< HEAD
             {% elif perms.catalogo.view_producto%}
             {% if producto %}
                       <div class="row" style="padding: 15px;margin-top: 60px; " >
@@ -222,8 +218,6 @@
 
 
             
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
             {% else%}
 
                 {% if producto %}
@@ -310,21 +304,13 @@
                               </div>
       
                               <div class="row" >
-<<<<<<< HEAD
                                 <button class="btn btn-primary"><a href="{% url 'compra_create'%}" style="text-decoration: none;color: white;">Comprar</a> </button>
-=======
-                                <a class="btn btn-primary" href="{% url 'compra_create'% }">Comprar</a>
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
                               </div>                   
                             </div>
                             
                           </section>
-<<<<<<< HEAD
                         </div>
                         <div class="row container-fluid" style="padding: 15px;" >
-=======
-                        </div><div class="row container-fluid" style="padding: 15px;" >
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
                             <div id="accordion show" class="col-12" >
                               <div class="card caracteris" id="caracteris" >
                                 <div class="card-header">

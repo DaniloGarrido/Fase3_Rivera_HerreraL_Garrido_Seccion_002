@@ -2,11 +2,7 @@
 {% load static%}
 {% block content %}
     <center>
-<<<<<<< HEAD
         <div class="col-12" style="margin-top: 60px;">
-=======
-        <div class="container-fluid" style="margin-top: 60px;">
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
           {% if user.is_authenticated  %}
           <p>Bievenido a <em>My HW Factory</em>, En Django!</p>
           
@@ -96,7 +92,6 @@
             
           </div>
           {%else%}
-<<<<<<< HEAD
           
           <div class="row container-fluid">
             <h2  >Productos en venta</h2>
@@ -111,35 +106,17 @@
                 <div class="card">
                   {% if producto.img1 %}
                   <img class="card-img-top" style="padding: 5px;" src="{{ producto.img1.url}}" >
-=======
-          <p> Usted no se encuentra Logeado y no puede acceder a esta opcion</p>
-          <a href="{% url 'login' %}">Iniciar Sesion</a>
-
-            {% if producto_list %}
-            <h2>Productos Registrados</h2>
-              {% for producto in producto_list%}
-              
-              <div class="productos-items  col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 ;">
-                <div class="card">
-                  {% if producto.img1 %}
-                  <img class="card-img-top" src="{{ producto.img1.url}}" >
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
                   {% endif%}
                   <div class="card-body">
                     <h5 class="card-title text-uppercase">{{ producto.nombre}}</h5>
                     <h5 class="card-title text-uppercase">${{ producto.precio}}</h5>
                     <a href="{% url 'producto-detail' producto.pk %}"
-<<<<<<< HEAD
                             class="btn btn-primary" style="float:none;">
-=======
-                             class="btn btn-primary" style="float: right;">
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
                               Ver más
                           </a>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             {% endfor %}
           {% endif %}
         </section>
@@ -156,11 +133,6 @@
             <a href="#" class="itemFiltro " category="ram">RAM</a>            
           </div>
           </aside>
-=======
-              {% endfor %}
-           
-            {% endif %}
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
           {% endif %}
         </div>
     </center>
