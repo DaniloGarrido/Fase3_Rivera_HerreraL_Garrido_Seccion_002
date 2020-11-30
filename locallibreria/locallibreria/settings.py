@@ -41,16 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'catalogo.apps.CatalogoConfig',
     'rest_framework',
-<<<<<<< HEAD
     'crispy_forms',
 ]
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
-=======
-]
-
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
