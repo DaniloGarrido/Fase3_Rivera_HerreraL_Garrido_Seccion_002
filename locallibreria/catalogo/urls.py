@@ -11,12 +11,9 @@ urlpatterns = [
     path('marca/<int:pk>/',views.MarcaDetailView.as_view(),name='marca-detail'),
     path('marcas/', views.MarcaListView.as_view(), name='marca'),
     path('compra/<int:pk>/',views.CompraDetailView.as_view(),name='compra-detail'),
-<<<<<<< HEAD
     path('registro/',Registrousuario,name='registro'),
     
     
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 ]
 
 urlpatterns+=[ 
@@ -27,9 +24,6 @@ urlpatterns+=[
     path('marca/<int:pk>/update/',views.MarcaUpdate.as_view(),name='marca_update'),
     path('marca/<int:pk>/delete/',views.MarcaDelete.as_view(),name='marca_delete'),
     path('compra/create/',views.CompraCreate.as_view(),name='compra_create'),
-<<<<<<< HEAD
     
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 ]
 

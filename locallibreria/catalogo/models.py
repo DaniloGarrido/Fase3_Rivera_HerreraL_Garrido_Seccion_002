@@ -35,11 +35,8 @@ class Producto(models.Model):
     img2=models.ImageField( verbose_name="Imagen", upload_to="images", null=True,blank=True)
     img3=models.ImageField( verbose_name="Imagen", upload_to="images", null=True,blank=True)
     img4=models.ImageField( verbose_name="Imagen", upload_to="images", null=True,blank=True)
-<<<<<<< HEAD
     categoria=models.ForeignKey('Categoria', on_delete=models.SET_NULL,null=True,blank=True)
-=======
 
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
     def get_absolute_url(self):
         return reverse('producto-detail', args=[str(self.id)])
 
@@ -54,8 +51,6 @@ class Compra(models.Model):
     telefono=models.PositiveIntegerField(blank=False,help_text='Ingrese teléfono de contacto')
     correo=models.CharField(max_length=25, null=True, blank=True,help_text='Correo')
 
-<<<<<<< HEAD
-=======
 class Compra(models.Model):
     producto=models.ForeignKey('Producto', on_delete=models.SET_NULL,null=True,blank=True)
     nombre=models.CharField(max_length=100 ,help_text='Nombre completo')
@@ -64,7 +59,7 @@ class Compra(models.Model):
     telefono=models.PositiveIntegerField(blank=False,help_text='Ingrese teléfono de contacto')
     correo=models.CharField(max_length=25, null=True, blank=True,help_text='Correo')
 
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
+
     img1=models.ImageField( verbose_name="Imagen", upload_to="images" ,null=True,blank=True)
     LOAN_STATUS = (
         ('d', 'Default'),
@@ -79,12 +74,12 @@ class Compra(models.Model):
     )
     def get_absolute_url(self):
         return reverse('compra-detail', args=[str(self.id)])
-<<<<<<< HEAD
+
 
     def __str__(self):
         return f'{self.compra}' 
-=======
+
     def __str__(self):
         return self.nombre
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
+
 

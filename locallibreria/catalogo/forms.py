@@ -1,9 +1,5 @@
 from django import forms
-<<<<<<< HEAD
 from django.contrib.auth.forms import UserCreationForm
-=======
-
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 from . models import Producto,Marca
 
 
@@ -86,11 +82,7 @@ class ProductoForm(forms.ModelForm):
             ))
     class Meta:
         model = Producto
-<<<<<<< HEAD
         fields = ('nombre','marca','modelo', 'precio', 'color','peso','alto','ancho','img1','img2','img3','img4')
 
 class CustomUserForm(UserCreationForm):
     pass 
-=======
-        fields = ('nombre','marca','modelo', 'precio', 'color','peso','alto','ancho','img1','img2','img3','img4')
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8

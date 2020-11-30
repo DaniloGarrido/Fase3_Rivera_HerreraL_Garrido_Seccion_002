@@ -1,18 +1,10 @@
 from django.shortcuts import render,redirect,get_object_or_404
-<<<<<<< HEAD
 from .models import Producto,Marca,Compra 
 from django.views import generic
 from .  forms import ProductoForm, CustomUserForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
-=======
-from .models import Producto,Marca,Compra
-from django.views import generic
-from .  forms import ProductoForm
-from django.http import HttpResponseRedirect
-
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 #Info Formularios
 from django.views.generic.edit import CreateView, UpdateView,DeleteView
 from django.urls import reverse_lazy
@@ -64,7 +56,6 @@ class MarcaListView(generic.ListView):
     model = Marca
     paginate_by = 10
     #///////////////////////
-<<<<<<< HEAD
 class CategoriaCreate(CreateView):
     model= Marca
     fields='__all__'
@@ -84,8 +75,6 @@ class CategoriaListView(generic.ListView):
     model = Marca
     paginate_by = 10
     #///////////////////////
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 class CompraCreate(CreateView):
     model= Compra
     fields='__all__'
@@ -95,7 +84,6 @@ class CompraDetailView(generic.DetailView):
 
 
 def ProductoCreate(request):
-<<<<<<< HEAD
     if request.method == "POST":
         form = ProductoForm(request.POST,files=request.FILES)
         if form.is_valid():
@@ -103,15 +91,6 @@ def ProductoCreate(request):
             form.save()
             #form.save_m2m()
             return request(reverse_lazy('producto-detail'), pk=form.pk)
-=======
-    if request.method == "post":
-        form = ProductoForm(request.POST,files=request.FILES)
-        if form.is_valid():
-            post = form.save(commit=False)
-            post.save()
-            #form.save_m2m()
-            return HttpResponseRedirect(reverse_lazy('producto-detail'), pk=post.pk)
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 
      
 
@@ -119,7 +98,6 @@ def ProductoCreate(request):
         form = ProductoForm()
         return render(request, 'catalogo/producto_form.html', {'form': form})
 
-<<<<<<< HEAD
 def Registrousuario(request):
     data = {
         'form':CustomUserForm()
@@ -136,8 +114,6 @@ def Registrousuario(request):
     return render(request, 'registration/register_create.html',data)
     
 
-=======
->>>>>>> ebe3f87592cce845610355bd6aa3c3a56c08e1b8
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
